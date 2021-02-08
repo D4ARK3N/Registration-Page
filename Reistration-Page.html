@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<style type="text/css">
+		*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 14px;
+	background: #f2f2f2;
+}
+.wrapper{
+	background-color: #fff;
+	width: 500px;
+	padding: 25px;
+	margin: 50px auto;
+	border-top: 5px solid #8690d8;
+	box-shadow: 0 0 3px rgba(0,0,0,0.1); 
+}
+.wrapper h2{
+	font-size: 24px;
+	line-height: 24px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.input-name{
+	width: 90%;
+	position: relative;
+	margin: 18px auto;
+
+}
+.lock{
+	padding: 7.6px 11px;
+}
+.name{
+	width: 45%;
+	padding: 8px 0 8px 40px;
+}
+.input-name span{
+	margin-left: 35px;
+}
+.text-name{
+	width: 100%;
+	padding: 8px 0 8px 40px;
+}
+.input-name i{
+	position: absolute;
+	font-size: 18px;
+	border-right: 1px solid #cccccc;
+}
+.email{
+	padding: 7.6px;
+}
+.fa-lock, .fa-phone{
+	padding: 7.6px;
+	margin-left: 2px;
+}
+.text-name, .name{
+	border: 1px solid #cccccc;
+	outline: none;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+}
+.text-name:hover, .name:hover{
+	background-color: #fafafa;
+}
+.text-name:focus, .name:focus{
+	-webkit-box-shadow: 0 0 2px 1px rgba(255, 169 0, 0.5);
+	-moz-box-shadow: 0 0 2px 1px rgba(255, 169 0, 0.5);
+	box-shadow: 0 0 2px 1px rgba(255, 169 0, 0.5);
+	border: 1px solid #8690d8;
+	background: #fafafa;
+}
+.radio-button{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.gender{
+	margin-right: 16px;
+}
+.gender::before{
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 8px;
+	border-radius: 100%;
+	vertical-align: -3px;
+	border: 2px solid #cccccc;
+	padding: 2.5px;
+	background-color: transparent;
+	background-clip: content-box;
+	transition: all 0.2s ease;
+}
+.radio-button:hover + .gender::before{
+	border-color: #8690d8;
+}
+.radio-button:checked + .gender::before{
+	background-color: #8690d8;
+	border-color: #8690d8;
+}
+.chack{
+	margin-right: 16px;
+	position: relative;
+}
+.chack:before{
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 8px;
+	vertical-align: 2ppx;
+	border: 2px solid #cccccc;
+	padding: 2.5px;
+	background-color: transparent;
+	background-clip: content-box;
+	transition: all 0.2s ease;
+}
+.chack:after{
+	border-right: 2px solid #8690d8;
+	border-top: 2px solid #8690d8;
+	content:"";
+	height: 20px;
+	left: 2px;
+	position: absolute;
+	top: 7px;
+	transform: scaleX(-1) rotate(135deg);
+	transform-origin: left top;
+	width: 7px;
+	display: none;
+}
+.chack-button{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.chack-button:hover + .chack::before{
+	border-color: #8690d8;
+}
+.chack-button:checked + .chack::before{
+	border-color: #8690d8;
+}
+.chack-button:checked + .chack::after{
+	-moz-animation: check 0.8s ease 0s running;
+	-webkit-animation:check 0.8s ease 0s running;
+	animation: check 0.8s ease 0s running;
+	display: block;
+	width: 7px;
+	height: 20px;
+	border-color: #8690d8;
+}
+@-webkit-keyfram check{
+	0%{height: 0; width: 0;}
+	25%{height: 0; width: 7px;}
+	50%{height: 20px; width: 7px;}
+}
+.button{
+	background-color: #8690d8;
+	height: 35px;
+	line-height: 35px;
+	width: 100%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.button:hover{
+	background-color: #ffffff;
+	border: 2px solid #8690d8;
+	color: #8690d8;
+}
+.button:focus{
+	background-color: #8690d8;
+	color: #ffffff;
+}
+@media(max-width:480px){
+	.wrapper{
+		width:100%;
+	}
+	.input-name{
+		margin-bottom: -10px;
+	}
+	.name{
+		width: 100%;
+		padding: 8px 0 8px 40px;
+		margin-bottom: 10px;
+	}
+	.input-name span{
+		padding: 0;
+		margin: 0;
+	}
+}
+.input-name a{
+	text-decoration: none;
+
+}
+	</style>
+	<title>Become an Employee</title>
+</head>
+<body>
+<div class="wrapper">
+	<h2>Registration Page</h2>
+	<div class="container">
+		<form>
+
+			<!--Name Field-->
+			<div class="input-name">
+				<i class="fa fa-user lock"></i>
+				<input type="text" placeholder="First Name" required class="name">
+				<span>
+					<i class="fa fa-user lock"></i>
+					<input type="text" placeholder="Last Name" required class="name">
+				</span>
+			</div>
+
+
+			<!-- User Name Field-->
+			<div class="input-name">
+				<i class="fa fa-user lock"></i>
+				<input type="text" placeholder="User Name" required class="text-name">
+			</div>
+
+
+			<!--Mail Field-->
+			<div class="input-name">
+				<i class="fa fa-envelope email"></i>
+				<input type="email" placeholder="Email" required class="text-name">
+			</div>
+
+
+			<!--Phone Number Field-->
+			<div class="input-name">
+				<i class="fa fa-phone"></i>
+				<input type="phone" placeholder="Phone Number" required class="text-name">
+			</div>
+
+			
+			<!--Password Field-->
+			<div class="input-name">
+				<i class="fa fa-lock"></i>
+				<input type="password" placeholder="Password" required class="text-name">
+			</div>
+
+
+			<!--Confirm Password Field-->
+			<div class="input-name">
+				<i class="fa fa-lock"></i>
+				<input type="password" placeholder="Confirm Password" required class="text-name">
+			</div>
+
+
+			<!--Gender Field-->
+			<div class="input-name">
+				<input type="radio" name="radiogroup1" id="ravi" class="radio-button">
+				<label for="ravi" class="gender">Male</label>
+				<input type="radio" name="radiogroup1" id="ravi1" class="radio-button">
+				<label for="ravi1" class="gender">Female</label>
+			</div>
+			
+
+			<!--CB Field-->
+			<div class="input-name">
+				<input type="checkbox" id="cb1" class="chack-button">
+				<label for="cb1" class="chack">I agree with term and coditions</label>
+			</div>
+			
+
+
+			<!--Button Field-->
+			<div class="input-name">
+				<input class="button" type="submit" value="Register">
+			</div>
+
+			<!--Login Redirect Page-->
+			<div class="input-name">
+				<a href="#">If you Already Have Account, Plese Click Here to Login</a>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
